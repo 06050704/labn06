@@ -1,0 +1,102 @@
+#include<Keypad.h>
+
+void setup() {
+    pinMode(12, OUTPUT);
+    Serial.begin(9600);
+}
+
+void aa(int a, int b, int c){
+      tone(a,b,c);
+      delay(c); 
+      noTone(a);
+  }
+
+void loop() {
+char R;
+       if(Serial.available())
+   {
+  R = Serial.read();
+  Serial.println(R);
+  if(R=='A'){
+  aa(pin,400,100);
+  delay(100);
+  aa(pin,400,300);
+  delay(100);
+    }
+
+     else if(R=='B'){
+  aa(pin,400,300);
+  delay(100);
+  aa(pin,400,100);
+  delay(100);
+  aa(pin,400,100);
+  delay(100);
+  aa(pin,400,100);
+  delay(100);
+    }
+
+     else if(R=='C'){
+  aa(pin,400,300);
+  delay(100);
+  aa(pin,400,100);
+  delay(100);
+    aa(pin,400,300);
+  delay(100);
+    aa(pin,400,100);
+  delay(100);
+    }
+
+    else if(R=='D'){
+  aa(pin,400,300);
+  delay(100);
+  aa(pin,400,100);
+  delay(100);
+  aa(pin,400,100);
+  delay(100);
+    }
+
+    else if(R=='E'){
+  aa(pin,400,100);
+  delay(100);
+    }
+
+    else if(R=='F'){
+  aa(pin,400,100);
+  delay(100);
+    aa(pin,400,100);
+  delay(100);
+  aa(pin,400,300);
+  delay(100);
+    aa(pin,400,100);
+  delay(100);
+    }
+
+    else if(R=='G'){
+  aa(pin,400,300);
+  delay(100);
+  aa(pin,400,300);
+  delay(100);
+    aa(pin,400,100);
+  delay(100);
+    }
+
+    else if(R=='H'){
+  aa(pin,400,100);
+  delay(100);
+  aa(pin,400,100);
+  delay(100);
+    aa(pin,400,100);
+  delay(100);
+    aa(pin,400,100);
+  delay(100);
+    }
+
+
+    else if(R=='I'){
+  aa(pin,400,100);
+  delay(100);
+  aa(pin,400,100);
+  delay(100);
+    }
+  }
+}
